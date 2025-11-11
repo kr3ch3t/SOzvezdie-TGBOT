@@ -66,7 +66,7 @@ class TelegramBot:
 
     def _hash_password(self, password: str) -> str:
         """Хэширование пароля (SHA-512)."""
-        return hashlib.sha256(password.encode()).hexdigest()
+        return hashlib.sha512(password.encode()).hexdigest()
 
     # === Обработчики ===
 

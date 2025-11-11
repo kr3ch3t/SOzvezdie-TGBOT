@@ -65,7 +65,7 @@ class TelegramBot:
                 conn.commit()
 
     def _hash_password(self, password: str) -> str:
-        """Хэширование пароля (SHA-256)."""
+        """Хэширование пароля (SHA-512)."""
         return hashlib.sha256(password.encode()).hexdigest()
 
     # === Обработчики ===
@@ -205,8 +205,6 @@ class TelegramBot:
         print("Бот СПО Созвездия запущен...")
         self.bot.infinity_polling()
 
-
-# === ЗАПУСК ===
 if __name__ == "__main__":
     TOKEN = "8575715519:AAGk2Lk2yrGEjYvlvbm9X-Ia_AhOjgalzNw"
 
